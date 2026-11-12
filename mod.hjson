@@ -1,7 +1,7 @@
 displayName: "[#0c0800]Lost Concinnity"
 name: "lost"
 author: "Seraphim4404"
-main: "lc.Unloader"
+main: "forgotten.ExampleMod"
 description: "A mod revised from hjson and world processor, now made into Java. I pray this goes well."
 subtitle: "I am happy."
 version: 0.0.0
