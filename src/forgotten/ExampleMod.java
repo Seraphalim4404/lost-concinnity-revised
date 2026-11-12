@@ -1,4 +1,4 @@
-package example;
+package forgotten;
 
 import arc.*;
 import arc.util.*;
@@ -9,9 +9,8 @@ import mindustry.ui.dialogs.*;
 public class ExampleJavaMod extends Mod{
 
     public ExampleJavaMod(){
-        Log.info("Loaded ExampleJavaMod constructor.");
-
-        //listen for game load event
+        
+        Log.info("How to mod in Java.mp4");
         Events.on(ClientLoadEvent.class, e -> {
             //show dialog upon startup
             Time.runTask(10f, () -> {
