@@ -6,9 +6,9 @@ import mindustry.game.EventType.*;
 import mindustry.mod.*;
 import mindustry.ui.dialogs.*;
 
-public class ExampleJavaMod extends Mod{
+public class ExampleMod extends Mod{
 
-    public ExampleJavaMod(){
+    public ExampleMod(){
         
         Log.info("How to mod in Java.mp4");
         Events.on(ClientLoadEvent.class, e -> {
