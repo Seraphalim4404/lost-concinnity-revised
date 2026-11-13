@@ -41,17 +41,18 @@ public class LOSTCustomStatuses extends StatusEffect {
     public void update(Unit unit, StatusEntry entry) {
         if(lastStand) {
             float lastStandTargetPercentage = unit.health / unit.maxHealth;
+            float lastStandTicks = lastStandDuration / 60f;
             if (!reverseLastStand) {
-                for (int timer = 0; timer <= lastStandDuration; timer++) {
+                for (int timer = 0; timer <= lastStandTicks; timer++) {
                     if (lastStandTargetPercentage <= lastStandHealthPercentage) {
-                        unit.maxHealth = Float.POSITIVE_INFINITY;
+                        unit.healthMultiplier = Float.POSITIVE_INFINITY;
                         break;
                     }
                 }
             } else {
-                for (int reverseTimer = 0; reverseTimer <= lastStandDuration; reverseTimer++) {
+                for (int reverseTimer = 0; reverseTimer <= lastStandTicks; reverseTimer++) {
                     if (lastStandTargetPercentage >= lastStandHealthPercentage) {
-                        unit.maxHealth = Float.POSITIVE_INFINITY;
+                        unit.healthMultiplier = Float.POSITIVE_INFINITY;
                         break;
                     }
                 }
