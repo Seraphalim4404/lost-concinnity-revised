@@ -1,4 +1,4 @@
-package forgotten;
+package FORGOTTEN;
 
 import arc.*;
 import arc.util.*;
@@ -6,13 +6,13 @@ import mindustry.game.EventType.*;
 import mindustry.mod.*;
 import mindustry.ui.dialogs.*;
 
-public class ExampleMod extends Mod{
+public class Unloader extends Mod{
 
-    public ExampleMod(){
+    public Unloader(){
         
         Log.info("How to mod in Java.mp4");
         Events.on(ClientLoadEvent.class, e -> {
-            //show dialog upon startup
+
             Time.runTask(10f, () -> {
                 BaseDialog dialog = new BaseDialog("frog");
                 dialog.cont.add("behold").row();
