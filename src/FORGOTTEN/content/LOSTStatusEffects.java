@@ -8,7 +8,7 @@ public class LOSTStatusEffects {
     broken, lastStand;
 
     public static void load(){
-        broken = new StatusEffect("Broken"){{
+        broken = new StatusEffect("broken"){{
             damageMultiplier = speedMultiplier = reloadMultiplier = buildSpeedMultiplier = dragMultiplier = 0.5f;
 
             intervalDamage = 100 / 60f;
@@ -16,8 +16,8 @@ public class LOSTStatusEffects {
             intervalDamageTime = 60;
         }};
 
-        //Special
-        lastStand = new LOSTCustomStatuses("Last Stand"){{
+        //Specialized Status Effects
+        lastStand = new LOSTCustomStatuses("lastStand"){{
             damageMultiplier = 3;
             reloadMultiplier = 3;
             lastStand = true;
