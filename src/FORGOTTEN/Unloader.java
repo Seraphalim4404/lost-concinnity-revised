@@ -1,5 +1,6 @@
 package FORGOTTEN;
 
+import FORGOTTEN.content.LOSTStatusEffects;
 import arc.*;
 import arc.util.*;
 import mindustry.game.EventType.*;
@@ -26,6 +27,7 @@ public class Unloader extends Mod{
 
     @Override
     public void loadContent(){
+        LOSTStatusEffects.load();
         Log.info("Loading some example content.");
     }
 
