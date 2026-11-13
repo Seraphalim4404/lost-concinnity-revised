@@ -46,24 +46,27 @@ public class LOSTCustomStatuses extends StatusEffect {
             float lastStandTargetPercentage = unit.health / unit.maxHealth;
             if (!reverseLastStand) {
                 if (lastStandTargetPercentage <= lastStandHealthPercentage) {
-                    for (int timer = 0; timer <= lastStandDuration; timer++) {
-                        unit.healthMultiplier = Float.POSITIVE_INFINITY;
-                        unit.apply(LOSTStatusEffects.lastStandTemporary, lastStandDuration);
-                    }
+                    unit.healthMultiplier = Float.POSITIVE_INFINITY;
+                    unit.apply(LOSTStatusEffects.lastStandTemporary, lastStandDuration);
+                    for (int timer = 0; timer <= lastStandDuration; timer++);
+
                 }
 
             } else if (!permanentLastStand) {
                 if (lastStandTargetPercentage >= lastStandHealthPercentage) {
-                    for (int reverseTimer = 0; reverseTimer <= lastStandDuration; reverseTimer++) {
-                        unit.healthMultiplier = Float.POSITIVE_INFINITY;
-                    }
                     unit.apply(LOSTStatusEffects.lastStandTemporaryReversed, lastStandDuration);
+                    if (lastStandTargetPercentage <= lastStandHealthPercentage) {
+                        unit.healthMultiplier = Float.POSITIVE_INFINITY;
+                        for (int reverseTimer = 0; reverseTimer <= lastStandDuration; reverseTimer++) ;
+                    }
                 }
             } else {
-                for (int permanentTimer = 0; permanentTimer <= lastStandDuration; permanentTimer++) {
-                        unit.healthMultiplier = Float.POSITIVE_INFINITY;
-                        unit.apply(LOSTStatusEffects.lastStandPermanent);
+                if (lastStandTargetPercentage <= lastStandHealthPercentage) {
+                    unit.healthMultiplier = Float.POSITIVE_INFINITY;
+                    for (int permanentTimer = 0; permanentTimer <= lastStandDuration; permanentTimer++);
+                    unit.apply(LOSTStatusEffects.lastStandPermanent);
                 }
+
             }
         }
     }

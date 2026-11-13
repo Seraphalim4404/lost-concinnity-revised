@@ -32,6 +32,8 @@ public class LOSTStatusEffects {
             lastStand = true;
             lastStandDuration = 300;
             lastStandHealthPercentage = 0.5f;
+
+            permanent = true;
         }};
 
         //Hidden
