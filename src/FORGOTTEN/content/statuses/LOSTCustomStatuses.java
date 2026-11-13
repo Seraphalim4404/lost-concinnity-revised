@@ -5,9 +5,7 @@ import FORGOTTEN.content.misc.LOSTStats;
 import mindustry.gen.Unit;
 import mindustry.entities.units.StatusEntry;
 import mindustry.type.StatusEffect;
-import mindustry.world.meta.Stat;
 import mindustry.world.meta.StatUnit;
-import mindustry.world.meta.StatValue;
 
 import static mindustry.graphics.Pal.stat;
 
