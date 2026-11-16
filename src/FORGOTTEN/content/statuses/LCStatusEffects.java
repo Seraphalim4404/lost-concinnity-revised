@@ -4,9 +4,7 @@ import mindustry.type.StatusEffect;
 
 public class LCStatusEffects {
     public static StatusEffect
-    surgeRusher, broken, lastStand,
-
-    lastStandTemporary, lastStandTemporaryReversed, lastStandPermanent;
+    surger, broken, lastStand, restrained;
     public static void load(){
         broken = new StatusEffect("broken"){{
             damageMultiplier = speedMultiplier = reloadMultiplier = buildSpeedMultiplier = dragMultiplier = 0.5f;
@@ -18,7 +16,7 @@ public class LCStatusEffects {
             intervalDamageTime = 60;
         }};
 
-        surgeRusher = new StatusEffect("surgeRusher"){{
+        surger = new StatusEffect("surger"){{
             speedMultiplier = 1.5f;
             damageMultiplier = 1.5f;
             reloadMultiplier = 1.25f;
@@ -27,10 +25,14 @@ public class LCStatusEffects {
 
         //Specialized Status Effects
 
-        lastStand = new LCCustomStatuses("lastStand"){{
+        lastStand = new LCCustomStatuses("last-stand"){{
             lastStand = true;
             lastStandDuration = 300f;
             lastStandHealthPercentage = 0.2f;
+
+            damageMultiplierOnTrigger = 3f;
+            speedMultiplierOnTrigger = 1.25f;
+            reloadMultiplierOnTrigger = 2.25f;
 
             permanent = true;
         }};
