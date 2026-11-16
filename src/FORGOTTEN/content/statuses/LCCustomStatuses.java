@@ -46,9 +46,9 @@ public class LCCustomStatuses extends StatusEffect {
             stats.add(stat,lastStandHealthPercentage * 100, StatUnit.percent);
             stats.add(LCStats.lastStandDuration, lastStandDuration / 60f, StatUnit.seconds);
         }
-        if(damageMultiplierOnTrigger != 1) stats.addMultModifier(LCStats.damageMultiplierOnTrigger, dragMultiplierOnTrigger);
-        if(speedMultiplierOnTrigger != 1) stats.addMultModifier(LCStats.speedMultiplierOnTrigger, dragMultiplierOnTrigger);
-        if(reloadMultiplierOnTrigger != 1) stats.addMultModifier(LCStats.reloadMultiplierOnTrigger, dragMultiplierOnTrigger);
+        if(damageMultiplierOnTrigger != 1) stats.addMultModifier(LCStats.damageMultiplierOnTrigger, damageMultiplierOnTrigger);
+        if(speedMultiplierOnTrigger != 1) stats.addMultModifier(LCStats.speedMultiplierOnTrigger, speedMultiplierOnTrigger);
+        if(reloadMultiplierOnTrigger != 1) stats.addMultModifier(LCStats.reloadMultiplierOnTrigger, reloadMultiplierOnTrigger);
         if(dragMultiplierOnTrigger != 1) stats.addMultModifier(LCStats.dragMultiplierOnTrigger, dragMultiplierOnTrigger);
     }
 
