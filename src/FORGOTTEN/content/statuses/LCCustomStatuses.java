@@ -1,12 +1,13 @@
 package FORGOTTEN.content.statuses;
 
+import FORGOTTEN.content.*;
+import FORGOTTEN.content.misc.LCStats;
 import arc.struct.ObjectMap;
 import arc.util.Time;
 import mindustry.entities.units.StatusEntry;
 import mindustry.gen.Unit;
 import mindustry.type.StatusEffect;
-import FORGOTTEN.content.*;
-import FORGOTTEN.content.misc.LCStats;
+
 import mindustry.world.meta.StatUnit;
 
 public class LCCustomStatuses extends StatusEffect {
