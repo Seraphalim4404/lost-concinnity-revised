@@ -1,6 +1,6 @@
 package FORGOTTEN.content.statuses;
 
-import FORGOTTEN.content.*;
+
 import FORGOTTEN.content.misc.LCStats;
 import arc.struct.ObjectMap;
 import arc.util.Time;
